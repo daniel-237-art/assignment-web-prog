@@ -1,0 +1,19 @@
+
+const select = document.getElementById("themeSelect");
+const body = document.body;
+
+
+const savedTheme = localStorage.getItem("theme") || "rainbow";
+body.setAttribute("data-theme", savedTheme);
+
+
+if (select) {
+  select.value = savedTheme;
+
+  select.addEventListener("change", () => {
+    const newTheme = select.value;
+    body.setAttribute("data-theme", newTheme);
+    localStorage.setItem("theme", newTheme);
+  });
+}
+

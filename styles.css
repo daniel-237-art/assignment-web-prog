@@ -1,0 +1,107 @@
+/* --- RESET --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* --- BASE --- */
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  transition: background 0.6s, color 0.6s;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* --- HEADER --- */
+.topbar {
+  background: var(--header-bg);
+  color: var(--header-text);
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.topbar h1 {
+  font-size: 1.6rem;
+}
+
+nav a {
+  color: var(--header-text);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+label {
+  font-weight: 500;
+}
+
+select {
+  margin-left: 0.5rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* --- MAIN --- */
+.container {
+  flex: 1;
+  padding: 2rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+/* --- THEMES --- */
+body[data-theme="rainbow"] {
+  --bg: linear-gradient(135deg, #ff007f, #ffae00, #00c6ff);
+  --text: #fff;
+  --header-bg: rgba(0, 0, 0, 0.3);
+  --header-text: #fff;
+}
+
+body[data-theme="sunset"] {
+  --bg: linear-gradient(135deg, #ff9966, #ff5e62);
+  --text: #fff;
+  --header-bg: rgba(255, 255, 255, 0.2);
+  --header-text: #fff;
+}
+
+body[data-theme="ocean"] {
+  --bg: linear-gradient(135deg, #00b4db, #0083b0);
+  --text: #f0faff;
+  --header-bg: rgba(255, 255, 255, 0.1);
+  --header-text: #fff;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 600px) {
+  .topbar {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .topbar h1 {
+    font-size: 1.3rem;
+  }
+}
