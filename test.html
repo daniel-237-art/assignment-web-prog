@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .card {
+      background-color: white;         /* white box */
+      padding: 20px;                   /* space inside */
+      margin: 20px;                    /* space outside */
+      border-radius: 10px;             /* rounded corners */
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* the little shadow */
+      width: 100%;
+    }
+  </style>
+</head>
+<center>
+
+<body style="background-color: #757070;">
+  <div id="myCard" class="card">
+    <h2>Welcome</h2>
+    <p>This section looks like a box with shadow!</p>
+  </div>
+  <h3>Trouve ma couleur préférée :</h3>
+<input type="color" name="favcolor" id="pickColor">
+  <div id="yours" class="card">
+    <h2>What is yours ?</h2>
+    <p>Change the color of the box above using the color picker!</p>
+
+  </div>
+  <h3>Montre moi la tienne</h3>
+<input type="color" name="yfavcolor" id="pickyour">
+
+ <script>
+    // On récupère la div et le color picker
+    const card1 = document.getElementById('myCard');
+    const colorPicker1 = document.getElementById('pickColor');
+
+    // Quand la couleur change, on applique cette couleur au fond de la div
+    colorPicker1.addEventListener('input', function() {
+      card1.style.backgroundColor = this.value;
+    });
+
+      // On récupère la div et le color picker
+    const card2 = document.getElementById('yours');
+    const colorPicker2 = document.getElementById('pickyour');
+
+    // Quand la couleur change, on applique cette couleur au fond de la div
+    colorPicker2.addEventListener('input', function() {
+      card2.style.backgroundColor = this.value;
+    });
+  </script>
+
+</body></center>
+</html>
