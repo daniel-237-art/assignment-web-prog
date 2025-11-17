@@ -3,12 +3,51 @@
 <head>
 <meta charset="UTF-8">
 <title>Login Form (Table Layout)</title>
+<style>
+
+body {
+  background-image: url("vi.jpg"); /* Chemin de l'image */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 12px;
+  border: 1px solid #898181;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.pass {
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  width: 280px;
+  text-align: center;
+  background: linear-gradient(90deg, #077df3, #fffb0b);
+}
+
+input[type="text"],
+input[type="password"] {
+  background-color: #f9f9f9;
+  cursor: pointer;
+}
+
+</style>
 </head>
 <body>
 
+<div class="pass">
 <h2>Login Form</h2>
-
-<form action="#" method="post">
+<form action="First page.html" method="post">
   <table border="0" cellpadding="5">
     <tr>
       <td><label for="username">Username:</label></td>
@@ -25,6 +64,7 @@
     </tr>
   </table>
 </form>
+</div>
 
 </body>
 </html>

@@ -8,7 +8,7 @@
 /* --- BASE --- */
 body {
   font-family: "Segoe UI", Arial, sans-serif;
-  background: var(--bg);
+  background: linear-gradient(135deg, #077df3, #fffb0b);
   color: var(--text);
   transition: background 0.6s, color 0.6s;
   min-height: 100vh;
